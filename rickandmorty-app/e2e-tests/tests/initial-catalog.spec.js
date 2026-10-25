@@ -5,6 +5,7 @@ test.describe('Rick & Morty SPA - Catálogo Inicial', () => {
   test.beforeEach(async ({ page }) => {
     // Esperar a que la red esté inactiva o la página cargue por completo
     await page.goto('/', { waitUntil: 'networkidle' });
+    await page.waitForSelector('.character-card', { timeout: 15000 });
   });
 
   test('Debe cargar el catálogo principal con el título correcto y 20 personajes iniciales', async ({ page }) => {
