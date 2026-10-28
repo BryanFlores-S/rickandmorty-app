@@ -1,14 +1,10 @@
-evidence: https://drive.google.com/drive/folders/1pAesLAhDrfBnFhRKzk3boC2PExZxUQTO?usp=sharing
-
-# 🛸 Rick and Morty Character Catalog SPA
+## Rick and Morty 
 
 A lightweight, high-performance Single Page Application (SPA) built with **Spring Boot** and **Vanilla JavaScript** (Tailwind CSS) that integrates with the external [Rick and Morty API](https://rickandmortyapi.com/).
 
 The project demonstrates front-end asynchronous state management, simulated network delay with real-time feedback, API request cancellation, and clean back-end proxy architecture.
 
----
-
-## ✨ Features
+ Features
 
 - **Search with Simulated Latency:** Mandatory 4-second countdown counter and loading GIF animation for all non-empty search queries.
 - **Request Abort Control:** Built-in `AbortController` mechanism to cancel pending HTTP requests on rapid user keystrokes, preventing race conditions.
@@ -19,7 +15,7 @@ The project demonstrates front-end asynchronous state management, simulated netw
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```plaintext
 rickandmorty-app/
@@ -44,3 +40,23 @@ rickandmorty-app/
 │   │           └── img/
 │   │               └── loading.gif               # Loading State Asset
 └── pom.xml
+
+## evidence of deployment without Docker:
+https://drive.google.com/drive/folders/1pAesLAhDrfBnFhRKzk3boC2PExZxUQTO?usp=sharing
+
+## Dockerization & AWS Deployment
+
+This project has been containerized using Docker with Amazon Corretto Java 21, and prepared for automated deployment on AWS EC2 instances.
+
+### Prerequisites
+- Docker installed on the target machine.
+- Access to Docker Hub repository (`bryanflores001/rickandmorty-app:latest`).
+
+## AWS Deployment with Docker
+To deploy the application on an AWS EC2 instance using Docker, follow these steps after starting your lab:
+
+1. Connect to your EC2 instance via EC2 Instance Connect.
+2. Run the automated deployment script:
+   ```bash
+   ./deploy.sh
+
