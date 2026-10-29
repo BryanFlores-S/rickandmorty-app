@@ -13,7 +13,6 @@ services:
       - app-network
     depends_on:
       - rickandmorty-app
-      - minimarket-app
 
   rickandmorty-app:
     image: bryanflores001/rickandmorty-app:latest
@@ -21,15 +20,6 @@ services:
     restart: always
     expose:
       - "8081"
-    networks:
-      - app-network
-
-  minimarket-app:
-    image: bryanflores001/minimarket:latest
-    container_name: minimarket-app-container
-    restart: always
-    expose:
-      - "8080"
     networks:
       - app-network
 
